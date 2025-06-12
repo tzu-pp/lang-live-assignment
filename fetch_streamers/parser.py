@@ -5,7 +5,7 @@ from api_url import *
 
 def request(streamer_type, url, params=None):
     try:
-        response = requests.get(url, params=params, timeout=10)
+        response = requests.post(url, params=params, timeout=10)
         response.raise_for_status()   # check status code, throw error while 4xx 5xx
         return response.json()
 
